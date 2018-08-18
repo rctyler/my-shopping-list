@@ -1,0 +1,15 @@
+{
+  "name": "my-shopping-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bootstrap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir dist && ./node_modules/uglify-js/bin/uglifyjs src/js/storage.js src/js/item.js src/js/cart.js src/js/bootstrap.js -o dist/my-shopping-list.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^3.4.7"
+  }
+}
