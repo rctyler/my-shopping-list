@@ -1,6 +1,8 @@
 # My Shopping List
 ## What is it?
 Minimalistic shopping cart implementation backed by local storage using vanilla Javascript
+## How do I see it?
+https://rctyler.github.io/my-shopping-list
 ## How do I build it?
 `npm run build`
 ## How do I run it?

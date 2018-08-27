@@ -1,6 +1,115 @@
-body {
-  color: black;
+.stylized {
+  display: grid;
+  grid-template-rows: 0.5fr min-content 1fr 0.5fr;
+  grid-template-areas:
+      "header"
+      "input"
+      "output"
+      "footer";
+  font-family: 'Arial';
 }
-body header h1 {
-  font-size: 2rem;
+
+.stylized header {
+  grid-area: header;
+  background-color: aliceblue;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+}
+
+.stylized h1 {
+  font-size: 1.5rem;
+}
+
+.stylized .input {
+  grid-area: input;
+  display: flex;
+  flex-direction: column;
+  background-color: floralwhite;
+  padding: 1.5vw 0 1.5vw 0;
+}
+
+.stylized .input-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.stylized .input-btns-span {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.stylized .input-btn {
+  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+  margin-bottom: 0.5rem;
+}
+
+.stylized .output {
+  grid-area: output;    display: flex;
+  flex-direction: row;
+}
+
+.stylized #input-item-label {
+  margin-right: 1.5vw;
+  padding: 1.5vw 0 1.5vw 0;
+}
+
+.stylized #shopping-item {
+  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+}
+.stylized #shopping-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.stylized #shopping-list li {
+  list-style-type: none;
+  border: 1px solid black;
+  text-align: center;
+  padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.stylized #shopping-list li:nth-of-type(odd) {
+  background-color: paleturquoise
+}
+
+.stylized #shopping-list li:nth-of-type(even) {
+  background-color: peachpuff;
+}
+
+.stylized footer {
+  grid-area: footer;
+  align-items: center;
+  justify-items: left;
+  display: grid;
+}
+
+.stylized .removeBtn {
+
+}
+
+.stylized .item {
+
+}
+
+@media only screen and (min-width: 725px)  {
+  .stylized {
+    grid-template-rows: 0.5fr 1fr 0.5fr;
+    grid-template-columns: 50vw 1fr;
+    grid-template-areas:
+      "header header"
+      "output input"
+      "footer footer";
+  }
+
+  .stylized .input {
+    padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+  }
 }

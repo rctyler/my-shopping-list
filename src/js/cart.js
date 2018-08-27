@@ -36,20 +36,45 @@
       _resetInput();
     }
 
+    function removeAll() {
+      list.innerHTML = "";
+      storage.saveShoppingList([]);
+    }
+
+    function stylize() {
+      document.querySelector("body").classList.add('stylized');
+      document.querySelector("#stylizeBtn").setAttribute("hidden", "true");
+      document.querySelector("#unstylizeBtn").removeAttribute("hidden", "true");
+    }
+
+    function unstylize() {
+      document.querySelector("body").classList.remove('stylized');
+      document.querySelector("#stylizeBtn").removeAttribute("hidden", "true");
+      document.querySelector("#unstylizeBtn").setAttribute("hidden", "true");
+    }
+
     function _resetInput() {
       itemInput.value = "";
     }
 
     function _newShoppingItem(name) {
       var newShoppingItem = document.createElement("li");
-      newShoppingItem.appendChild(document.createTextNode(name));
+      var textItem = document.createElement("label");
+
+      textItem.appendChild(document.createTextNode(name));
+      textItem.setAttribute("class", "item");
+
+      newShoppingItem.appendChild(textItem);
       newShoppingItem.appendChild(shoppingItem.add(name.toLowerCase()));
       return newShoppingItem;
     }
     
     return {
       init: init,
-      add: add
+      add: add,
+      removeAll: removeAll,
+      stylize: stylize,
+      unstylize: unstylize
     };
   }());
 }(window, document));

@@ -7,12 +7,23 @@
     <header>
       <h1>My Shopping List</h1>
     </header>
-    <div>
-      <label>Enter a New Shopping Item:</label>
-      <input id="shopping-item" placeholder="New item">
-      <button onclick="_my.shoppingCart.add()">Add</button>
+    <div class="input">
+      <span class="input-item">
+        <label id="input-item-label" >Enter a New Shopping Item:</label>
+        <input id="shopping-item" placeholder="New item">
+      </span>
+      <span class="input-btns-span">
+        <button class="input-btn" onclick="_my.shoppingCart.add()">Add</button>
+        <button class="input-btn" onclick="_my.shoppingCart.removeAll()">Remove All</button>
+      </span>
     </div>
-    <ul id='shopping-list'></ul>
+    <div class="output">
+      <ul id='shopping-list'></ul>
+    </div>
+    <footer>
+      <button id="stylizeBtn" onclick="_my.shoppingCart.stylize()">Stylize</button>
+      <button id="unstylizeBtn" hidden="false" onclick="_my.shoppingCart.unstylize()">UnStylize</button>
+    </footer>
     <script type="text/javascript" src="dist/my-shopping-list.min.js"></script>
   </body>
 </html>
