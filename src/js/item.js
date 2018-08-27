@@ -8,7 +8,10 @@
 
       removeBtn.setAttribute("id", "remove-"+itemName);
       removeBtn.addEventListener("click", remove);
+      removeBtn.setAttribute("class", "removeBtn");
+
       removeBtn.textContent = "Remove";
+      //removeBtn.innerHTML = "<i class='fa fa-close'>";
 
       return removeBtn;
     }
